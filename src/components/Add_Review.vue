@@ -1,7 +1,7 @@
 <template>
   
     <div>
-      /* eslint-disable */ 
+       
       <h1>Add in review</h1>
       <div>
         <label>Product Name</label>
@@ -62,6 +62,11 @@
         <label for="No">No</label>
       </div>
       <div>
+        <label>Review</label>
+        <input type="text" v-model="reviews" class="form-control" />
+        <!-- <p>Reviews Array: {{ reviewsArray }}</p> -->
+      </div>
+      <div>
         <button class="btn btn-primary mt-3" @click="submitReview">
           Submit Review
         </button>
@@ -82,6 +87,7 @@
       this.productName = response.data.productName;
       this.productType = response.data.productType;
       this.brand = response.data.brand;
+      this.availableColor = response.data.availableColor;
       this.reviews = response.data.reviews;
       this.image = response.data.image;
       this.specification.pointSize = response.data.specification.pointSize;
@@ -94,6 +100,7 @@
         productName: "",
         productType: "",
         brand: "",
+        availableColor: "",
         reviews: [],
         image: "",
         specification: {
@@ -117,6 +124,11 @@
         this.$emit("reviewadded");
       },
     },
+  //   computed: {
+  //     reviewsArray() {
+  //   return this.reviews.split(' ');
+  // }
+  //   }
   };
   </script>
   

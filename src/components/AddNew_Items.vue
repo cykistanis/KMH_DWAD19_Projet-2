@@ -150,7 +150,7 @@
         this.isurlinvalid = urlRegex.test(newImage);
       },
       "specification.pointSize"(newInput) {
-        const pointInput = /^(\d+|NA)$/;
+        const pointInput = /^(\d+(?:\.\d+)?|NA)$/;
         this.isPointSizeInvalid = pointInput.test(newInput);
       },
     },

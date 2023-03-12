@@ -35,7 +35,7 @@
         />
         <Add_Review
           v-if="currentPage == 'add-reviews'"
-          :itemId="itembeingEdited"
+          :itemId="reviewadded"
           @review-added="goallitems"
         />
         <Contact_us v-if="currentPage == 'contactus'" />

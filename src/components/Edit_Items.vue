@@ -13,10 +13,10 @@
         <label>Brand</label>
         <input type="text" v-model="brand" class="form-control" />
       </div>
-      <!-- <div>
+      <div>
         <label>Available Color</label>
         <input type="text" v-model="availableColor" class="form-control" />
-      </div> -->
+      </div>
       <div>
         <label>Image</label>
         <input type="url" v-model="image" class="form-control" />
@@ -84,6 +84,7 @@
       this.productName = response.data.productName;
       this.productType = response.data.productType;
       this.brand = response.data.brand;
+      this.availableColor = response.data.availableColor;
       this.image = response.data.image;
       this.specification.pointSize = response.data.specification.pointSize;
       this.specification.inkColor = response.data.specification.inkColor;
@@ -95,6 +96,7 @@
         productName: "",
         productType: "",
         brand: "",
+        availableColor:"",
         image: "",
         specification: {
           pointSize: "",

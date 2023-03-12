@@ -55,7 +55,7 @@
                   <li class="list-group-item">Type : {{ p.productType }}</li>
                   <li class="list-group-item">Brand: {{ p.brand }}</li>
                   <li class="list-group-item">
-                    Available Color: {{ p.availcolor }}
+                    Available Color: {{ p.availableColor }}
                   </li>
   
                   <li class="list-group-item">Specification</li>
