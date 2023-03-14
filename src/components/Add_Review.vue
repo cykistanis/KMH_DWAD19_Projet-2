@@ -88,7 +88,7 @@
       this.productType = response.data.productType;
       this.brand = response.data.brand;
       this.availableColor = response.data.availableColor;
-      this.reviews = response.data.reviews;
+      this.reviews = response.data.reviews || [];
       this.image = response.data.image;
       this.specification.pointSize = response.data.specification.pointSize;
       this.specification.inkColor = response.data.specification.inkColor;
@@ -115,13 +115,16 @@
       /* eslint-disable */
       async submitReview(itemId) {
         /* eslint-disable */
+        const newReviews = this.reviews.split(",");
         const response = await axios.patch(
           API_URL + "test_stationery/" + this.itemId + "/reviews",
           {
-            reviews: this.reviews,
+            reviews: newReviews,
           }
         );
-        this.$emit("reviewadded");
+        this.reviews = newReviews; // set the reviews data to the new array
+  this.$emit("reviewadded");
+        
       },
     },
   //   computed: {

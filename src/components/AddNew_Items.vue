@@ -16,6 +16,12 @@
         <input type="text" v-model="brand" class="form-control" required />
       </div>
       <div>
+      <label>Reviews</label>
+             
+        <input type="text" v-model="reviews" class="form-control" required />
+      
+    </div>
+      <div>
         <label>Available Color</label>
         <input
           type="text"
@@ -60,14 +66,7 @@
         <label>Ink Type</label>
         <input type="text" v-model="specification.inkType" class="form-control" />
       </div>
-      <!-- <div>
-        <label>Waterproof</label>
-        <input
-          type="text"
-          v-model="specification.waterProof"
-          class="form-control"
-        />
-      </div> -->
+      
       <div>
         <label for="waterproof">Waterproof</label>
         <input
@@ -104,6 +103,7 @@
         productName: "",
         productType: "",
         brand: "",
+        reviews:[],
         availableColor: "",
         image: "",
         specification: {
@@ -125,8 +125,9 @@
           productName: this.productName,
           productType: this.productType,
           brand: this.brand,
+          reviews:this.reviews,
           availableColor: this.availableColor,
-          image: this.image,
+          image: this.image,          
           pointSize: this.specification.pointSize,
           inkColor: this.specification.inkColor,
           inkType: this.specification.inkType,
