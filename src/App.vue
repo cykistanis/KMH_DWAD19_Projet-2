@@ -17,6 +17,9 @@
             <li class="nav-item">
               <a class="nav-link" href="#" @click="gocontactus">Contact Us</a>
             </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#" @click="gologin">Log In</a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -39,6 +42,7 @@
           @review-added="goallitems"
         />
         <Contact_us v-if="currentPage == 'contactus'" />
+        <Log_in v-if="currentPage == 'login'" />
         <AddNew_Items
           v-if="currentPage == 'addnewitems'"
           @add-new-items="goallitems"
@@ -55,6 +59,7 @@ import Contact_us from "./components/Contact_us";
 import AddNew_Items from "./components/AddNew_Items";
 import Edit_Items from "./components/Edit_Items";
 import Add_Review from "./components/Add_Review";
+import Log_in from "./components/Log_in";
 
 export default {
   name: "App",
@@ -65,6 +70,7 @@ export default {
     Contact_us,
     AddNew_Items,
     Edit_Items,
+    Log_in,
   },
   data: function () {
     return {
@@ -77,6 +83,9 @@ export default {
     },
     goallitems: function () {
       this.currentPage = "allitems";
+    },
+    gologin: function () {
+      this.currentPage = "login";
     },
     gocontactus: function () {
       this.currentPage = "contactus";
