@@ -2,23 +2,30 @@
   <div id="maindiv">
     <div class="container">
       <nav class="navbar navbar-expand-sm navbar-dark">
+        <div >
+    <a class="navbar-brand" href="#">
+      <img :src="require('@/assets/navlogo.png')" alt="Bootstrap" 
+      class="navbarlogo"
+      width="200" height="140">
+    </a>
+  </div>
         <div class="container-fluid">
           <!-- Links -->
           <ul class="navbar-nav">
             <li class="nav-item">
-              <a class="nav-link" href="#" @click="goallitems">All Items</a>
+              <a class="nav-link" href="#" @click="goallitems">Stationery Hub</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" @click="gonewitems">Add New Items</a>
+              <a class="nav-link" href="#" @click="gonewitems">Contribute to the Collection</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" @click="goaboutus">About Us</a>
+              <a class="nav-link" href="#" @click="goaboutus">The Stationery Enthusiasts</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" @click="gocontactus">Contact Us</a>
+              <a class="nav-link" href="#" @click="gocontactus">Get in Touch</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#" @click="gologin">Log In</a>
+              <a class="nav-link" href="#" @click="gologin">Sign In to Stationery World</a>
             </li>
           </ul>
         </div>
@@ -124,6 +131,12 @@ export default {
 
 .navbar-brand {
   font-weight: bold;
+  margin-left: 10px;
+  border-radius: 20px;
+}
+
+.navbarlogo {
+  border-radius: 10px;
 }
 
 .navbar-nav .nav-link {
@@ -136,8 +149,12 @@ export default {
 }
 
 .navbar-nav .nav-link:hover {
-  background-color: #BEC5AD;
+  background-color: #adc0c5;
   border-radius: 15px;
+}
+
+.nav-link{
+  /* text-align: center; */
 }
 
 .card {

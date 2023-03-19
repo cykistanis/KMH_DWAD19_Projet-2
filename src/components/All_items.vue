@@ -1,12 +1,12 @@
   <template>
       <div>
-        <h1>All Items</h1>
+        <h1 class="mainserach">Search By Items</h1>
         <input type="text" v-model="searchterms" id="headersty" />
         <br />
     
         <!-- dropdown option start here-->
         <label for="inkcolor">Select Ink color</label>
-        <select name="inkcolor" v-model="searchbyink">
+        <select class="inkselector" name="inkcolor" v-model="searchbyink">
           <option value="">All Colours</option>
           <option value="Blue">Blue</option>
           <option value="Black">Black</option>
@@ -17,6 +17,7 @@
         <!-- checkbox for ink color start here -->
     
         <br />
+        <br/>
     
         <!-- Radio btn for waterproof start here -->
         <label for="waterproof">Waterproof</label>
@@ -95,7 +96,7 @@
                   </ul>
     
                     <img
-                      class="container cardimg"
+                      class="container cardimg imgsty"
                       v-bind:src="p.image"
                       width="50px"
                     />
@@ -200,6 +201,13 @@
     @import url("https://fonts.googleapis.com/css2?family=Courgette&family=Gothic+A1:wght@200&family=Libre+Baskerville:ital@1&family=Marck+Script&family=Nanum+Myeongjo&family=Oleo+Script&family=Satisfy&family=Tangerine:wght@700&display=swap");
     #headersty {
       display: block;
+      border-radius: 20px;
+      width: 300px;
+  
+    }
+
+    .inkselector{
+      border-radius: 10px;
     }
     
     .card-body {
@@ -218,8 +226,13 @@
       width: 18rem;
       margin-bottom: 20px;
     }
+
+   
     
     .editbtn {
       background-color: rgb(76, 185, 228);
+      
     }
+
+    
     </style>
