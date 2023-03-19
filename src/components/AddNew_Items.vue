@@ -1,6 +1,6 @@
 <template>
   <div class="addnewdiv">
-    /* eslint-disable */
+    
     <h1>Add New Items</h1>
     <div>
       <label>Name</label>
@@ -107,13 +107,7 @@ export default {
   },
 
   watch: {
-    // productName(newProduct) {
-    //   if (typeof newProduct === "string") {
-    //     this.isProductNameInvalid = false;
-    //   } else {
-    //     this.isProductNameInvalid = true;
-    //   }
-    // },
+    
 
     image(newImage) {
       const urlRegex = /^(ftp|http|https):\/\/[^ "]+$/;

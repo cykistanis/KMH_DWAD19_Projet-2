@@ -46,7 +46,7 @@
         <Add_Review
           v-if="currentPage == 'add-reviews'"
           :itemId="reviewadded"
-          @review-added="goallitems"
+          @reviewadded="goallitems"
         />
         <Contact_us v-if="currentPage == 'contactus'" />
         <Log_in v-if="currentPage == 'login'" />
@@ -154,7 +154,7 @@ export default {
 }
 
 .nav-link{
-  /* text-align: center; */
+  text-align: center;
 }
 
 .card {

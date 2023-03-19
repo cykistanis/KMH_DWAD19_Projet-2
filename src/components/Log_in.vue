@@ -10,11 +10,11 @@
         <label for="password">Password</label>
         <input type="password" class="form-control" id="password" v-model="password" />
       </div>
-      <button type="submit" class="btn btn-primary" @click.prevent="login()">Login</button>
+      <button type="submit" class="btn btn-primary" @click.prevent="login">Login</button>
     </form>
   </div>
 </template>
-  
+
 <script>
 /* eslint-disable */
 import axios from 'axios';
@@ -29,23 +29,17 @@ export default {
   },
   methods: {
     async login() {
-    
-        // const response = await axios.post(API_URL + "test_stationery/users", 
-
-        const response = await axios.post(API_URL+ 'test_stationery/login', {
-        
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
+      try {
+        const response = await axios.post(API_URL + "test_stationery/login", {
           username: this.username,
           password: this.password
-        })
-      });
-      const data = await response.json();
-      localStorage.setItem('token', data.token);
-      this.$router.push('/dashboard');
-    }
-  }
+        });
+
+console.log('Login successful');
+} catch (error) {
+console.log('Login failed');
+}
+},
+},
 };
 </script>
