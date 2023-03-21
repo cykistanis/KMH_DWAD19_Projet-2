@@ -11,6 +11,13 @@ The concept of this project originated from a personal interest in stationery, s
 
 
 ## Features
+There are 3 main features in **WRITEFULLY YOURS**. These are:
+- Browse in the Stationery Hub
+- Share your thoughts
+- Contribute to the Collection.
+
+Details of the features have been elaborated in below.
+
 ### Browse in the Stationery Hub
 As a user of WRITEFULLY Yours, you will be able to browse a wide range of stationery items, including pens, pencils, notebooks, markers, and other similar products. Each collection will feature an array of stationery items that serve unique purposes, and users can explore these products in-depth.
 
@@ -33,6 +40,8 @@ In terms of design, it is built by using HTML and CSS, which allows for a clean 
 On the back-end, the website is implemented using Express.js and Node.js. Both are JavaScript-based technologies that facilitate server-side programming. These technologies asist to handle incoming requests, perform data validation, and execute other important tasks required for the website to serve its purpose.
 
 Finally, MongoDB which is a NoSQL database, is used to store and manage the data for the website, such as user profiles and product reviews. This allows for efficient data management and retrieval, as well as scalability as the website grows. Overall, these technologies work together to provide a modern and efficient platform for users to review and explore stationery products.
+
+![bulbon](bulbon.png)
 
 
 ## Project setup
