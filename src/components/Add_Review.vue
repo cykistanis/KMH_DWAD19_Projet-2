@@ -89,7 +89,7 @@ export default {
     this.productType = response.data.productType;
     this.brand = response.data.brand;
     this.availableColor = response.data.availableColor;
-    this.reviews = response.data.reviews || [];
+    // this.reviews = response.data.reviews || [];
     this.image = response.data.image;
     this.specification.pointSize = response.data.specification.pointSize;
     this.specification.inkColor = response.data.specification.inkColor;
@@ -116,18 +116,29 @@ export default {
     /* eslint-disable */
     async submitReview(itemId) {
       /* eslint-disable */
-      
       const newReviews = this.reviews.split(",");
-      const response = await axios.patch(
-        API_URL + "test_stationery/" + this.itemId + "/reviews",
-        {
-          reviews: newReviews,
-        }
-      );
-      this.reviews = newReviews; // set the reviews data to the new array
-this.$emit("reviewadded");
+  const response = await axios.patch(
+    API_URL + "test_stationery/" + this.itemId + "/reviews",
+    {
+      reviews: newReviews,
+    }
+  );
+  this.reviews = "";
+  this.reviews = [...this.reviews, ...newReviews]; // append new reviews to the existing reviews data
+  this.$emit("reviewadded");
+}
       
-    },
+//       const newReviews = this.reviews.split(",");
+//       const response = await axios.patch(
+//         API_URL + "test_stationery/" + this.itemId + "/reviews",
+//         {
+//           reviews: newReviews,
+//         }
+//       );
+//       this.reviews = newReviews; // set the reviews data to the new array
+// this.$emit("reviewadded");
+      
+//     },
   },
   computed: {
     reviewsArray() {

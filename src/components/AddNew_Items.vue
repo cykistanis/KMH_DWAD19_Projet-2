@@ -5,25 +5,28 @@
     <div>
       <label>Name</label>
       <input type="text" v-model="productName" class="form-control" required />
-      <!-- <p v-if="isProductNameInvalid">Please enter a valid name.</p> -->
+      <p v-if="!productName">Please enter a name.</p>
     </div>
     <div>
       <label>Type</label>
       <input type="text" v-model="productType" class="form-control" required />
+      <p v-if="!productType">Please enter a Type of item.</p>
     </div>
     <div>
       <label>Brand</label>
       <input type="text" v-model="brand" class="form-control" required />
+      <p v-if="!brand">Please enter the item brand.</p>
     </div>
     <div>
       <label>Reviews</label>
-
+ 
       <input type="text" v-model="reviews" class="form-control" required />
 
     </div>
     <div>
       <label>Available Color</label>
       <input type="text" v-model="availableColor" class="form-control" required />
+      <p v-if="!availableColor">Please enter the available colors.</p>
     </div>
     <div>
       <label for="image">Image</label>
