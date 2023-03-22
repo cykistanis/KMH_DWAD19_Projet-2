@@ -61,6 +61,7 @@
     <button @click="addNew" :disabled="!isValid" class="btn btn-primary mt-3">
       Add New
     </button>
+    <p> Please fill in all the required fields to enable "ADD NEW" button.</p>
   </div>
 </template>
   

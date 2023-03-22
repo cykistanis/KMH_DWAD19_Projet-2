@@ -41,7 +41,7 @@ On the back-end, the website is implemented using Express.js and Node.js. Both a
 
 Finally, MongoDB which is a NoSQL database, is used to store and manage the data for the website, such as user profiles and product reviews. This allows for efficient data management and retrieval, as well as scalability as the website grows. Overall, these technologies work together to provide a modern and efficient platform for users to review and explore stationery products.
 
-![ap](assets/ap.jpg)
+
 
 
 ## Project setup
